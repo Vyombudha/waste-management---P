@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Items - WasteLess</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><i class="fas fa-recycle"></i> WasteLess</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="browse.html" class="active">Browse Items</a>
+                <a href="post.html">Post Item</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Browse Items</h1>
+            <p>Find reusable materials in your community</p>
+        </div>
+    </section>
+
+    <section class="browse-section">
+        <div class="container">
+            <div class="browse-controls">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for items..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="item-count">20 items found</div>
+            </div>
+            
+
+            
+            <div class="view-container">
+                <!-- Categories Sidebar -->
+                <div class="categories-sidebar">
+                    <h3><i class="fas fa-filter"></i> Filter by Category</h3>
+                    <div class="categories-list">
+                        <div class="category-item active" data-category="all">
+                            <i class="fas fa-th-large category-icon"></i>
+                            <span>All Items</span>
+                        </div>
+                        <div class="category-item" data-category="electronics">
+                            <i class="fas fa-laptop category-icon"></i>
+                            <span>Electronics</span>
+                        </div>
+                        <div class="category-item" data-category="furniture">
+                            <i class="fas fa-couch category-icon"></i>
+                            <span>Furniture</span>
+                        </div>
+                        <div class="category-item" data-category="textiles">
+                            <i class="fas fa-tshirt category-icon"></i>
+                            <span>Textiles</span>
+                        </div>
+                        <div class="category-item" data-category="tools">
+                            <i class="fas fa-tools category-icon"></i>
+                            <span>Tools & Parts</span>
+                        </div>
+                        <div class="category-item" data-category="packaging">
+                            <i class="fas fa-box category-icon"></i>
+                            <span>Packaging</span>
+                        </div>
+                        <div class="category-item" data-category="books">
+                            <i class="fas fa-book category-icon"></i>
+                            <span>Books & Media</span>
+                        </div>
+                        <div class="category-item" data-category="sports">
+                            <i class="fas fa-dumbbell category-icon"></i>
+                            <span>Sports & Fitness</span>
+                        </div>
+                        <div class="category-item" data-category="kitchen">
+                            <i class="fas fa-utensils category-icon"></i>
+                            <span>Kitchen & Dining</span>
+                    </div>
+                        <div class="category-item" data-category="garden">
+                            <i class="fas fa-seedling category-icon"></i>
+                            <span>Garden & Outdoor</span>
+                </div>
+                        <div class="category-item" data-category="other">
+                            <i class="fas fa-ellipsis-h category-icon"></i>
+                            <span>Other</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grid View -->
+                <div class="grid-view">
+                    <div class="items-grid">
+                        <!-- Electronics Items -->
+                        <div class="item-card" data-id="1" data-category="electronics">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Broken laptop">
+                                <span class="item-distance">0.8 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Broken Laptop for Parts</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Electronics</p>
+                                <p class="item-description">Dell laptop with cracked screen but working motherboard and components. Perfect for repairs.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 2 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="2" data-category="electronics">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Computer monitor">
+                                <span class="item-distance">1.2 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>24-inch LCD Monitor</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Electronics</p>
+                                <p class="item-description">Samsung monitor in excellent condition. Just upgraded to 4K, this one still works perfectly.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 week ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="3" data-category="electronics">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Smartphone">
+                                <span class="item-distance">2.1 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>iPhone 8 (Working)</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Electronics</p>
+                                <p class="item-description">iPhone 8 with cracked back glass but fully functional. Great for parts or repair project.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 3 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Furniture Items -->
+                        <div class="item-card" data-id="4" data-category="furniture">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Wooden desk">
+                                <span class="item-distance">0.5 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Solid Wood Desk</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Furniture</p>
+                                <p class="item-description">Beautiful oak desk with drawer. Some minor scratches but sturdy and functional.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 day ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="5" data-category="furniture">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Office chair">
+                                <span class="item-distance">1.8 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Ergonomic Office Chair</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Furniture</p>
+                                <p class="item-description">High-quality office chair with adjustable height and lumbar support. Very comfortable.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 4 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Textiles Items -->
+                        <div class="item-card" data-id="6" data-category="textiles">
+                            <div class="item-image">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2024/10/456917818/IP/AS/RL/24939457/scrabble-check-lycra-fabric.jpg" alt="Fabric scraps">
+                                <span class="item-distance">0.9 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Assorted Fabric Scraps</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Textiles</p>
+                                <p class="item-description">Leftover fabric pieces from sewing projects. Perfect for small crafts and quilting.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 2 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="7" data-category="textiles">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Yarn">
+                                <span class="item-distance">2.3 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Knitting Yarn Collection</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Textiles</p>
+                                <p class="item-description">Various colors of wool yarn. Great for knitting projects or learning to knit.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 week ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tools & Parts Items -->
+                        <div class="item-card" data-id="8" data-category="tools">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1581166397057-235af2b3c6dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tool set">
+                                <span class="item-distance">1.1 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Basic Tool Set</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Tools & Parts</p>
+                                <p class="item-description">Complete set of hand tools including screwdrivers, pliers, and wrenches. Good condition.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 3 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="9" data-category="tools">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Drill">
+                                <span class="item-distance">0.7 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Cordless Drill</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Tools & Parts</p>
+                                <p class="item-description">Black & Decker drill with two batteries. Works great for home projects.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 5 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Packaging Items -->
+                        <div class="item-card" data-id="10" data-category="packaging">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Moving boxes">
+                                <span class="item-distance">1.5 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Moving Boxes (Set of 8)</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Packaging</p>
+                                <p class="item-description">Used once for moving. Various sizes available. Still in excellent condition.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 day ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="11" data-category="packaging">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bubble wrap">
+                                <span class="item-distance">0.4 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Bubble Wrap Rolls</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Packaging</p>
+                                <p class="item-description">Several rolls of bubble wrap for shipping and moving. Perfect for fragile items.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 2 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Books & Media Items -->
+                        <div class="item-card" data-id="12" data-category="books">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Books">
+                                <span class="item-distance">1.9 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Fiction Book Collection</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Books & Media</p>
+                                <p class="item-description">Collection of 15 paperback novels in good condition. Various genres available.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 week ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="13" data-category="books">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="DVDs">
+                                <span class="item-distance">0.6 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>DVD Collection</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Books & Media</p>
+                                <p class="item-description">Box of 20 DVDs including movies and TV series. All in good condition.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 3 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sports & Fitness Items -->
+                        <div class="item-card" data-id="14" data-category="sports">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Yoga mat">
+                                <span class="item-distance">1.3 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Yoga Mat & Blocks</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Sports & Fitness</p>
+                                <p class="item-description">Purple yoga mat with two foam blocks. Great for home workouts and stretching.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 4 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="15" data-category="sports">
+                            <div class="item-image">
+                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhUQEhAWFRIVFRgWFRUXFhgWFRYWFxcYGBoWFxUYHSggGR0lHRYWITEhJSkrLi4vFx8zODMtNygtLisBCgoKDQ0NDw0NDzcZFRkrNystNy0rKy03LSsrLS0rKysrLSsrNy0tKysrNystNy0rKy0rKzctKysrKysrKy0rK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgIDBAUHAQj/xAA/EAACAQIDBQYDBQcEAQUAAAABAgADEQQSIQUGMUFhEyJRcYGRBzKxUnKhwfAUI0JigqLRkrLC4fEVQ2Nzs//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7jERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBETRb27wJgqLHN++ZWFJQLktbQnwAPMwNHvnvuaDHD4bKao0eoRdUP2VHNvG+g66255id59pXzjG1Dz0IsPNALD2mlxW0CGOYHW5LHUknn6y/srai5uGYfxL9pTxHt7aGRUy3S+KdRXWjj7FCbdsBlK9XUaFeotbwM62jhgCCCCLgjUEHmDPnneXYSUcj03LJUXMrW1sdRcDnynUvhpt7t6C0XPfVbqToSL6g9QfwlRNoiICQrfjfxcCTQoqKmJtrc9ynfhmA1J55dNOJGl91vjtwYHCvX0z/JTB51G4e1ix6KZ89VapqMzMxJLEsx1ZmJu2p89TA3GP3ux9ZszY2svgKbdmo6ZUt+Mz9i/EbH4YjtKnb0+ee2YebAX95GkccCNPX318Jaz5GuLEDQg6gi/PpIr6G3X3ooY9L0zlqAd6mTqOoPMdZvZ87bG2n+y10qUmIDar011UnxBuOvHnO87E2muJpLUU627w8DKjYREQEREBERAREQEREBERAREQEREDxmABJ4DUzhO3Nqti8RUqknXVfBE1yL525eNzznSfiXt+pgsL+7phnrZqYuSAt0bUW58Jw2ptk0rK6C7sCWDW0NgBltewtbjAmNXYlPGYI1UAFaibVR9pSLqw66W9DOZ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" alt="Dumbbells">
+                                <span class="item-distance">2.0 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Adjustable Dumbbells</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Sports & Fitness</p>
+                                <p class="item-description">Pair of 5-25lb adjustable dumbbells. Perfect for home strength training.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 week ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Kitchen & Dining Items -->
+                        <div class="item-card" data-id="16" data-category="kitchen">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Blender">
+                                <span class="item-distance">0.8 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Kitchen Blender</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Kitchen & Dining</p>
+                                <p class="item-description">Oster blender with glass pitcher. Works perfectly for smoothies and soups.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 2 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="17" data-category="kitchen">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Coffee maker">
+                                <span class="item-distance">1.6 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Coffee Maker</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Kitchen & Dining</p>
+                                <p class="item-description">12-cup coffee maker with timer. Clean and ready to use.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 5 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Garden & Outdoor Items -->
+                        <div class="item-card" data-id="18" data-category="garden">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Plant pots">
+                                <span class="item-distance">0.9 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Assorted Plant Pots</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Garden & Outdoor</p>
+                                <p class="item-description">Collection of 12 terracotta and ceramic pots. Various sizes for indoor/outdoor plants.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 1 day ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card" data-id="19" data-category="garden">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Garden tools">
+                                <span class="item-distance">1.4 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Garden Tool Set</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Garden & Outdoor</p>
+                                <p class="item-description">Basic garden tools including trowel, pruners, and gloves. Perfect for beginners.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 3 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Other Items -->
+                        <div class="item-card" data-id="20" data-category="other">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Art supplies">
+                                <span class="item-distance">1.7 km</span>
+                            </div>
+                            <div class="item-details">
+                                <h3>Art Supplies Collection</h3>
+                                <p class="item-category"><i class="fas fa-tag"></i> Other</p>
+                                <p class="item-description">Box of art supplies including paints, brushes, and sketchbooks. Great for creative projects.</p>
+                                <div class="item-meta">
+                                    <span class="item-date"><i class="far fa-calendar-alt"></i> Posted 2 days ago</span>
+                                    <button class="view-item-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="join-community">
+        <div class="join-container">
+            <h2>Don't See What You Need?</h2>
+            <p>Post a request or sign up to get notified when new items are added</p>
+            <button class="join-btn">Sign Up Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2><i class="fas fa-recycle"></i> WasteLess</h2>
+                <p>Community Recycling & Reuse Hub</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="browse.html">Browse Items</a></li>
+                        <li><a href="post.html">Post Item</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for tips on sustainable living and community updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 WasteLess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Item Detail Modal -->
+    <div class="modal" id="item-modal">
+        <div class="modal-content item-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body item-modal-body">
+                <div class="item-modal-gallery">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Item image" id="modal-main-image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 1" class="thumbnail active">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 2" class="thumbnail">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 3" class="thumbnail">
+                    </div>
+                </div>
+                <div class="item-modal-details">
+                    <h2 id="modal-item-title">Item Title</h2>
+                    <p class="modal-item-category"><i class="fas fa-tag"></i> <span id="modal-item-category">Category</span></p>
+                    <p class="modal-item-location"><i class="fas fa-map-marker-alt"></i> <span id="modal-item-location">Location</span> (<span id="modal-item-distance">0.0 km</span> away)</p>
+                    <p class="modal-item-date"><i class="far fa-calendar-alt"></i> Posted <span id="modal-item-date">date</span></p>
+                    
+                    <div class="modal-item-description">
+                        <h3>Description</h3>
+                        <p id="modal-item-description">Detailed description of the item will appear here.</p>
+                    </div>
+                    
+                    <div class="modal-item-condition">
+                        <h3>Condition</h3>
+                        <p id="modal-item-condition">Good</p>
+                    </div>
+                    
+                    <div class="modal-item-dimensions">
+                        <h3>Dimensions</h3>
+                        <p id="modal-item-dimensions">Width x Height x Depth</p>
+                    </div>
+                    
+                    <div class="modal-item-pickup">
+                        <h3>Pickup Information</h3>
+                        <p id="modal-item-pickup">Pickup details will appear here.</p>
+                    </div>
+                    
+                    <div class="modal-item-owner">
+                        <h3>Posted By</h3>
+                        <div class="owner-info">
+                            <img src="https://via.placeholder.com/50x50" alt="Owner profile" class="owner-avatar">
+                            <div>
+                                <p class="owner-name" id="modal-item-owner">User Name</p>
+                                <p class="owner-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(24 reviews)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-item-actions">
+                        <button class="request-item-btn">Request This Item</button>
+                        <button class="message-owner-btn">Message Owner</button>
+                        <button class="save-item-btn"><i class="far fa-bookmark"></i> Save for Later</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for login/signup -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                <div class="auth-forms">
+                    <form id="login-form" class="auth-form active">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <div class="form-group remember-me">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Login</button>
+                        <div class="social-auth">
+                            <p>Or login with</p>
+                            <div class="social-auth-buttons">
+                                <button type="button" class="google-auth"><i class="fab fa-google"></i> Google</button>
+                                <button type="button" class="facebook-auth"><i class="fab fa-facebook-f"></i> Facebook</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form id="signup-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" required>
+                        </div>
+                        <div class="form-group terms">
+                            <label><input type="checkbox" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Sign Up</button>
+                        <div class="social-auth">
+                            <p>Or sign up with</p>
+                            <div class="social-auth-buttons">
+                                <button type="button" class="google-auth"><i class="fab fa-google"></i> Google</button>
+                                <button type="button" class="facebook-auth"><i class="fab fa-facebook-f"></i> Facebook</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

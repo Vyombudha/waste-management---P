@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteLess - Community Recycling & Reuse Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><i class="fas fa-recycle"></i> WasteLess</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="browse.html">Browse Items</a></li>
+                <li><a href="post.html">Post Item</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Turn Waste Into Opportunity</h1>
+            <p>Join your local community in sharing, reusing, and recycling materials</p>
+            <div class="hero-buttons">
+                <a href="browse.html" class="browse-btn">Browse Items</a>
+                <a href="post.html" class="post-btn">Post an Item</a>
+            </div>
+            <div class="stats-container">
+                <div class="stat">
+                    <span class="stat-number">1,234</span>
+                    <span class="stat-label">Items Shared</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">567</span>
+                    <span class="stat-label">Active Members</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">890</span>
+                    <span class="stat-label">Kg Waste Saved</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Post Your Items</h3>
+                <p>Take a photo and describe your leftover materials, from cardboard to electronics</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Connect Locally</h3>
+                <p>Find items near you or get notified when something you need becomes available</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Arrange Pickup</h3>
+                <p>Coordinate with other members to arrange pickup or delivery of items</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Earn Points</h3>
+                <p>Get rewarded for your contributions to the circular economy</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <h2>Browse By Category</h2>
+        <div class="category-container">
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Electronics</h3>
+                <p>Gadgets, parts, cables</p>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3>Textiles</h3>
+                <p>Clothing, fabrics, materials</p>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h3>Packaging</h3>
+                <p>Boxes, containers, padding</p>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Tools & Parts</h3>
+                <p>Hardware, tools, components</p>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-couch"></i>
+                </div>
+                <h3>Furniture</h3>
+                <p>Home items, decorations</p>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <h3>Other</h3>
+                <p>Miscellaneous items</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="browse" class="browse-section">
+        <div class="browse-header">
+            <h2>Available Items Near You</h2>
+            <div class="browse-controls">
+                <div class="search-container">
+                    <input type="text" placeholder="Search items..." id="search-input">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="filter-dropdown">
+                    <button class="filter-btn">Filter <i class="fas fa-filter"></i></button>
+                    <div class="filter-content">
+                        <label><input type="checkbox" checked> Electronics</label>
+                        <label><input type="checkbox" checked> Textiles</label>
+                        <label><input type="checkbox" checked> Packaging</label>
+                        <label><input type="checkbox" checked> Tools & Parts</label>
+                        <label><input type="checkbox" checked> Furniture</label>
+                        <label><input type="checkbox" checked> Other</label>
+                        <div class="distance-filter">
+                            <span>Distance: <span id="distance-value">10</span> km</span>
+                            <input type="range" min="1" max="50" value="10" id="distance-slider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-container">
+            <div class="grid-view active" id="grid-view">
+                <div class="items-grid">
+                    <!-- Item cards will be dynamically generated here -->
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBkNVl5JOBhhE-E2E000b_Xla0NV5Hz0xOdw&s');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Electronics</div>
+                            <h3>Broken Laptop for Parts</h3>
+                            <p>Screen cracked but motherboard and other components still working.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 2.3 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted 2 days ago</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>Michael S. <i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Packaging</div>
+                            <h3>Moving Boxes (5)</h3>
+                            <p>Used once for moving. Still in good condition. Various sizes available.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 1.5 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted 1 day ago</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>Sarah L. <i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Textiles</div>
+                            <h3>Fabric Scraps for Crafting</h3>
+                            <p>Leftover fabric pieces from sewing projects. Good for small crafts.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 3.7 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted 3 days ago</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>Emma T. <i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Electronics</div>
+                            <h3>Old Smartphone (Working)</h3>
+                            <p>iPhone 8 with cracked back glass but fully functional. Great for parts or repair.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 4.1 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted 5 days ago</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>David K. <i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('data:image/jpeg;base64,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');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Tools & Parts</div>
+                            <h3>Assorted Computer Cables</h3>
+                            <p>Various USB, HDMI, and power cables. All tested and working.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 0.8 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted today</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>Alex P. <i class="fas fa-star"></i> 5.0</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('https://imgs.search.brave.com/40IhqJvfwwRxVZycYZH4jYDbamntnEPGBh87MGW4bjg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMy1t/ZWRpYTAuZmwueWVs/cGNkbi5jb20vYnBo/b3RvLzgwYnUtN2dW/UnVhSzdIdjJUeThk/T2cvbHMuanBn');"></div>
+                        <div class="item-details">
+                            <div class="item-category">Furniture</div>
+                            <h3>Wooden Chair (Needs Repair)</h3>
+                            <p>Solid wood chair with broken leg. Good for upcycling project.</p>
+                            <div class="item-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 5.2 km away</span>
+                                <span><i class="fas fa-calendar-alt"></i> Posted 4 days ago</span>
+                            </div>
+                            <div class="user-info">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="User" class="user-avatar">
+                                <span>Jessica M. <i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                            <button class="request-btn">Request Item</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="load-more-btn">Load More</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About WasteLess</h2>
+                <p>WasteLess is a community-driven platform that connects people who have leftover materials with those who can reuse them. Our mission is to reduce waste, promote a circular economy, and strengthen local communities.</p>
+                <p>By giving new life to items that would otherwise end up in landfills, we're helping to create a more sustainable future. From electronics to textiles, packaging to furniture, every item shared through our platform represents a step toward a zero-waste society.</p>
+                <h3>Our Impact</h3>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <span class="impact-number">5,000+</span>
+                        <span class="impact-label">Items Shared</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="impact-number">2,500+</span>
+                        <span class="impact-label">Active Members</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="impact-number">10,000+</span>
+                        <span class="impact-label">Kg Waste Diverted</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://www.grantthornton.com.ph/contentassets/0aef4f5057a34a979d9ac4c4b1a273bb/in-the-community_careers-page.jpg" alt="Community sharing materials and building sustainable connections">
+            </div>
+        </div>
+        <div class="testimonials">
+            <h3>What Our Community Says</h3>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I found the perfect parts to fix my old computer through WasteLess. Not only did I save money, but I also kept electronics out of the landfill."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Robert J." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Robert J.</span>
+                            <span class="author-role">Community Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a craft teacher, I've found so many materials for my classes through WasteLess. It's amazing what people are willing to share!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Maria T." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Maria T.</span>
+                            <span class="author-role">Art Teacher</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I've met so many like-minded people in my neighborhood through WasteLess. It's more than just sharing items - it's building community."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="James L." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">James L.</span>
+                            <span class="author-role">Neighborhood Organizer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-community">
+        <div class="join-container">
+            <h2>Join Our Community Today</h2>
+            <p>Start sharing, reducing waste, and connecting with your neighbors</p>
+            <button class="join-btn signup-btn">Sign Up Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2><i class="fas fa-recycle"></i> WasteLess</h2>
+                <p>Community Recycling & Reuse Hub</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="browse.html">Browse Items</a></li>
+                        <li><a href="post.html">Post Item</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for tips on sustainable living and community updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WasteLess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for item details -->
+    <div class="modal" id="item-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for login/signup -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                <div class="auth-forms">
+                    <form id="login-form" class="auth-form active">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <div class="form-group remember-me">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Login</button>
+                        <div class="social-auth">
+                            <p>Or login with</p>
+                            <div class="social-auth-buttons">
+                                <button type="button" class="google-auth"><i class="fab fa-google"></i> Google</button>
+                                <button type="button" class="facebook-auth"><i class="fab fa-facebook-f"></i> Facebook</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form id="signup-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" required>
+                        </div>
+                        <div class="form-group terms">
+                            <label><input type="checkbox" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Sign Up</button>
+                        <div class="social-auth">
+                            <p>Or sign up with</p>
+                            <div class="social-auth-buttons">
+                                <button type="button" class="google-auth"><i class="fab fa-google"></i> Google</button>
+                                <button type="button" class="facebook-auth"><i class="fab fa-facebook-f"></i> Facebook</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Authentication Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div id="login-form" class="auth-form active">
+                <h2>Welcome Back</h2>
+                <form id="login-form-element">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                        <span class="toggle-password" data-target="login-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember-me" name="remember">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span class="btn-text">Sign In</span>
+                        <span class="loading-spinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                    <p class="auth-link">
+                        <a href="#" id="forgot-password-link">Forgot password?</a>
+                    </p>
+                </form>
+            </div>
+            
+            <div id="signup-form" class="auth-form">
+                <h2>Join WasteLess</h2>
+                <form id="signup-form-element">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-firstname">First Name</label>
+                            <input type="text" id="signup-firstname" name="firstname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-lastname">Last Name</label>
+                            <input type="text" id="signup-lastname" name="lastname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="6">
+                        <span class="toggle-password" data-target="signup-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" name="confirm_password" required>
+                        <span class="toggle-password" data-target="signup-confirm-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="about.html" target="_blank">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span class="btn-text">Create Account</span>
+                        <span class="loading-spinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/items.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

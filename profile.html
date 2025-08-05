@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - WasteLess</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>WasteLess</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="profileName">User Name</h3>
+                <p id="profileEmail">user@email.com</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="userItemsCount">0</span>
+                        <span class="stat-label">Items</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="userRequestsCount">0</span>
+                        <span class="stat-label">Requests</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="userRating">0.0</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="userPoints">0</span>
+                        <span class="stat-label">Points</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="profile-menu">
+                <li class="active" data-section="my-items">
+                    <i class="fas fa-recycle"></i>
+                    My Items
+                </li>
+                <li data-section="my-requests">
+                    <i class="fas fa-handshake"></i>
+                    My Requests
+                </li>
+                <li data-section="received-requests">
+                    <i class="fas fa-inbox"></i>
+                    Received Requests
+                </li>
+                <li data-section="history">
+                    <i class="fas fa-history"></i>
+                    History
+                </li>
+                <li data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </li>
+            </ul>
+        </div>
+
+        <div class="profile-content">
+            <!-- My Items Section -->
+            <div class="profile-section active" id="my-items">
+                <div class="section-header">
+                    <h2>My Items</h2>
+                    <button class="btn" onclick="showAddItemModal()">
+                        <i class="fas fa-plus"></i> Add New Item
+                    </button>
+                </div>
+                <div class="items-grid" id="myItemsGrid">
+                    <!-- User items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- My Requests Section -->
+            <div class="profile-section" id="my-requests">
+                <div class="section-header">
+                    <h2>My Requests</h2>
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-filter="all">All</button>
+                        <button class="tab-btn" data-filter="pending">Pending</button>
+                        <button class="tab-btn" data-filter="accepted">Accepted</button>
+                        <button class="tab-btn" data-filter="rejected">Rejected</button>
+                        <button class="tab-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                <div class="requests-list" id="myRequestsList">
+                    <!-- User requests will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Received Requests Section -->
+            <div class="profile-section" id="received-requests">
+                <div class="section-header">
+                    <h2>Received Requests</h2>
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-filter="all">All</button>
+                        <button class="tab-btn" data-filter="pending">Pending</button>
+                        <button class="tab-btn" data-filter="accepted">Accepted</button>
+                        <button class="tab-btn" data-filter="rejected">Rejected</button>
+                        <button class="tab-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                <div class="requests-list" id="receivedRequestsList">
+                    <!-- Received requests will be loaded here -->
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="profile-section" id="history">
+                <div class="section-header">
+                    <h2>Activity History</h2>
+                    <div class="filter-options">
+                        <select id="historyFilter">
+                            <option value="all">All Activities</option>
+                            <option value="items">Items</option>
+                            <option value="requests">Requests</option>
+                            <option value="ratings">Ratings</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="history-timeline" id="historyTimeline">
+                    <!-- History activities will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="profile-section" id="settings">
+                <div class="section-header">
+                    <h2>Account Settings</h2>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <h3>Profile Information</h3>
+                        <form id="profileForm">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="settingsFullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="settingsEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" id="settingsPhone">
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" id="settingsLocation">
+                            </div>
+                            <button type="submit" class="btn">Update Profile</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Change Password</h3>
+                        <form id="passwordForm">
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" id="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm New Password</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn">Change Password</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Privacy Settings</h3>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" id="showEmail">
+                                <span class="slider"></span>
+                                Show email to other users
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="showPhone">
+                                <span class="slider"></span>
+                                Show phone number
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="emailNotifications">
+                                <span class="slider"></span>
+                                Email notifications
+                            </label>
+                        </div>
+                        <button class="btn" onclick="savePrivacySettings()">Save Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddItemModal()">&times;</span>
+            <h2>Add New Item</h2>
+            <form id="addItemForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="itemTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="itemDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="itemCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                        <option value="toys">Toys</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Condition</label>
+                    <select id="itemCondition" required>
+                        <option value="new">New</option>
+                        <option value="like-new">Like New</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Images</label>
+                    <input type="file" id="itemImages" multiple accept="image/*">
+                </div>
+                <button type="submit" class="btn">Add Item</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Item Modal -->
+    <div id="editItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditItemModal()">&times;</span>
+            <h2>Edit Item</h2>
+            <form id="editItemForm">
+                <input type="hidden" id="editItemId">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="editItemTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="editItemDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="editItemCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                        <option value="toys">Toys</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Condition</label>
+                    <select id="editItemCondition" required>
+                        <option value="new">New</option>
+                        <option value="like-new">Like New</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Update Item</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Request Response Modal -->
+    <div id="requestResponseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRequestResponseModal()">&times;</span>
+            <h2>Respond to Request</h2>
+            <form id="requestResponseForm">
+                <input type="hidden" id="requestId">
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="requestStatus" required>
+                        <option value="accepted">Accept</option>
+                        <option value="rejected">Reject</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message (Optional)</label>
+                    <textarea id="responseMessage"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Response</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

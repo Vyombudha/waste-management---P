@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - WasteLess</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>WasteLess Admin</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="admin-dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <ul class="admin-menu">
+                <li class="active" data-section="overview">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Overview
+                </li>
+                <li data-section="users">
+                    <i class="fas fa-users"></i>
+                    Users
+                </li>
+                <li data-section="items">
+                    <i class="fas fa-recycle"></i>
+                    Items
+                </li>
+                <li data-section="requests">
+                    <i class="fas fa-handshake"></i>
+                    Requests
+                </li>
+                <li data-section="categories">
+                    <i class="fas fa-tags"></i>
+                    Categories
+                </li>
+                <li data-section="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </li>
+            </ul>
+        </div>
+
+        <div class="admin-content">
+            <div class="admin-header">
+                <h1>Admin Dashboard</h1>
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3 id="totalUsers">0</h3>
+                            <p>Total Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-recycle"></i>
+                        <div>
+                            <h3 id="totalItems">0</h3>
+                            <p>Total Items</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h3 id="totalRequests">0</h3>
+                            <p>Total Requests</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 id="completedRequests">0</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="admin-section active" id="overview">
+                <div class="section-header">
+                    <h2>Dashboard Overview</h2>
+                </div>
+                <div class="chart-container">
+                    <canvas id="monthlyChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- Users Section -->
+            <div class="admin-section" id="users">
+                <div class="section-header">
+                    <h2>User Management</h2>
+                    <div class="search-box">
+                        <input type="text" id="userSearch" placeholder="Search users...">
+                        <button class="btn" onclick="searchUsers()">Search</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Full Name</th>
+                                <th>Rating</th>
+                                <th>Points</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Users will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Items Section -->
+            <div class="admin-section" id="items">
+                <div class="section-header">
+                    <h2>Item Management</h2>
+                    <div class="search-box">
+                        <input type="text" id="itemSearch" placeholder="Search items...">
+                        <button class="btn" onclick="searchItems()">Search</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="itemsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Owner</th>
+                                <th>Status</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemsTableBody">
+                            <!-- Items will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Requests Section -->
+            <div class="admin-section" id="requests">
+                <div class="section-header">
+                    <h2>Request Management</h2>
+                    <div class="filter-box">
+                        <select id="requestFilter">
+                            <option value="all">All Requests</option>
+                            <option value="pending">Pending</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="rejected">Rejected</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                        <button class="btn" onclick="filterRequests()">Filter</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="requestsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Item</th>
+                                <th>Requester</th>
+                                <th>Status</th>
+                                <th>Message</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requestsTableBody">
+                            <!-- Requests will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="admin-section" id="categories">
+                <div class="section-header">
+                    <h2>Category Management</h2>
+                    <button class="btn" onclick="showAddCategoryModal()">Add Category</button>
+                </div>
+                <div class="table-container">
+                    <table id="categoriesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Icon</th>
+                                <th>Items Count</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoriesTableBody">
+                            <!-- Categories will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reports Section -->
+            <div class="admin-section" id="reports">
+                <div class="section-header">
+                    <h2>System Reports</h2>
+                </div>
+                <div class="reports-container">
+                    <div class="report-card">
+                        <h3>Most Active Users</h3>
+                        <ul id="activeUsersList">
+                            <!-- Active users will be loaded here -->
+                        </ul>
+                    </div>
+                    <div class="report-card">
+                        <h3>Most Requested Items</h3>
+                        <ul id="popularItemsList">
+                            <!-- Popular items will be loaded here -->
+                        </ul>
+                    </div>
+                    <div class="report-card">
+                        <h3>Category Distribution</h3>
+                        <canvas id="categoryChart" width="300" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="addCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddCategoryModal()">&times;</span>
+            <h2>Add New Category</h2>
+            <form id="addCategoryForm">
+                <input type="text" id="categoryName" placeholder="Category Name" required>
+                <input type="text" id="categoryIcon" placeholder="Icon Class (e.g., fas fa-recycle)" required>
+                <button type="submit" class="btn">Add Category</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                <button class="tab-btn" onclick="showTab('signup')">Sign Up</button>
+            </div>
+            <div id="loginTab" class="tab-content active">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username or Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            <div id="signupTab" class="tab-content">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <input type="text" id="signupUsername" placeholder="Username" required>
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                    <input type="text" id="signupFullName" placeholder="Full Name" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
