@@ -286,5 +286,63 @@
     <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/admin.js"></script>
+    <script>
+// Sidebar navigation: show/hide sections
+Array.from(document.querySelectorAll('.admin-menu li')).forEach(function(menuItem) {
+    menuItem.addEventListener('click', function() {
+        // Remove active from all
+        document.querySelectorAll('.admin-menu li').forEach(li => li.classList.remove('active'));
+        this.classList.add('active');
+        // Hide all sections
+        document.querySelectorAll('.admin-section').forEach(sec => sec.classList.remove('active'));
+        // Show the selected section
+        const sectionId = this.getAttribute('data-section');
+        if (sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) section.classList.add('active');
+        }
+    });
+});
+// Modal logic for Add Category
+window.showAddCategoryModal = function() {
+    document.getElementById('addCategoryModal').style.display = 'block';
+};
+window.closeAddCategoryModal = function() {
+    document.getElementById('addCategoryModal').style.display = 'none';
+};
+// Modal logic for Auth
+window.closeAuthModal = function() {
+    document.getElementById('authModal').style.display = 'none';
+};
+window.showTab = function(tab) {
+    document.getElementById('loginTab').classList.remove('active');
+    document.getElementById('signupTab').classList.remove('active');
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    if (tab === 'login') {
+        document.getElementById('loginTab').classList.add('active');
+        document.querySelector('.tab-btn[onclick*="login"]').classList.add('active');
+    } else {
+        document.getElementById('signupTab').classList.add('active');
+        document.querySelector('.tab-btn[onclick*="signup"]').classList.add('active');
+    }
+};
+// Optional: Close modals when clicking outside
+window.onclick = function(event) {
+    const addCatModal = document.getElementById('addCategoryModal');
+    const authModal = document.getElementById('authModal');
+    if (event.target === addCatModal) addCatModal.style.display = 'none';
+    if (event.target === authModal) authModal.style.display = 'none';
+};
+// Stub functions for search/filter (UI only)
+window.searchUsers = function() {
+    alert('User search is a UI demo. Connect to backend for real search.');
+};
+window.searchItems = function() {
+    alert('Item search is a UI demo. Connect to backend for real search.');
+};
+window.filterRequests = function() {
+    alert('Request filter is a UI demo. Connect to backend for real filtering.');
+};
+</script>
 </body>
 </html>
